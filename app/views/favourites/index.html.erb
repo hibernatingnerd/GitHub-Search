@@ -1,0 +1,25 @@
+<header>
+  <h1 class="topBanner">MY GITHUB FAVOURITES</h1>
+</header>
+<!-- search box -->
+<main class="main">
+  <div class="leftBox">
+    <input id="inputData"></input>
+    <button id="searchButton">Submit</button>
+
+    <!-- table lists return values from Git Hub -->
+    <table id="resultTable">
+      <tr>
+        <th class="rT">Name</th>
+        <th class="rT">Language</th>
+        <th class="rT">Lastest Tag</th>
+        <th class="rT"></th>
+      </tr>
+    </table>
+  </div>
+
+  <div class="rightBox">
+    <% render %>
+  </div>
+</main>
+</body>

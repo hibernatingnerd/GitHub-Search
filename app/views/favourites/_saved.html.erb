@@ -1,0 +1,20 @@
+<table id="savedTable">
+  <tr>
+    <th class="lT">Name</th>
+    <th class="lT">Language</th>
+    <th class="lT">Lastest Tag</th>
+    <th class="lT"></th>
+  </tr>
+  
+  <% if @list %>
+    <%  @list.each {|item| %>
+      <tr>
+        <th><%= item.name %></th>
+        <th><%= item.language %></th>
+        <th></th>
+        <th><%= link_to 'Remove', favourite_path(item.id),
+        data: {:confirm => 'Are you sure?'}, :method => :delete %></th>
+      </tr>
+    <%  } %>
+  <% end %>
+</table>
