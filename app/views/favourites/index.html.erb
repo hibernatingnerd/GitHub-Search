@@ -4,9 +4,10 @@
 <!-- search box -->
 <main class="main">
   <div class="leftBox">
+  <div>
     <input id="inputData"></input>
     <button id="searchButton">Submit</button>
-
+  </div>
     <!-- table lists return values from Git Hub -->
     <table id="resultTable">
       <tr>
@@ -19,7 +20,25 @@
   </div>
 
   <div class="rightBox">
-    <% render %>
+    <table id="savedTable">
+      <tr>
+        <th class="lT">Name</th>
+        <th class="lT">Language</th>
+        <th class="lT">Lastest Tag</th>
+        <th class="lT"></th>
+      </tr>
+      <% if @list %>
+        <%  @list.each {|item, index| %>
+          <tr id='savedCard'>
+            <td id="index" hidden="true" data-value=<%= index %></td>
+            <td class="lT"><%= item.name %></td>
+            <td class="lT"><%= item.language %></td>
+            <td class="lT"> </td>
+            <td class="iT"><a href="#" id="delete" data-confirm="Are you sure to delete this item?">Delete</a></tr>
+          </tr>
+        <%  } %>
+      <% end %>
+    </table>
   </div>
 </main>
 </body>

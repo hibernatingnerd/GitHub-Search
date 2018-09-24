@@ -13,19 +13,5 @@
  *= require_tree .
  *= require_self
  */
-header {
-  text-align: center;
-  background-color: purple;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-}
-.leftBox {
-
-}
-
-.rightBox {
-  background-color: light-grey;
-}
+@import normalize.css
+@import main.css
